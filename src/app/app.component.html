@@ -1,0 +1,16 @@
+<div class="app p-5 container-fluid">
+    <h2 class="heading text-center mb-4">Github Random Users from API!</h2>
+    <div class="row">
+        <div class="col col-md-4 card m-auto shadow-lg">
+            <div class="text-center">
+              <app-user-card [user]="user" *ngIf="user; else loadingblock"></app-user-card>  
+              <ng-template #loadingblock>
+                <div class="text-center mt-5">
+                    <div class="spinner-border spinner-grow-mg text-white">
+                    </div>
+                </div>
+            </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
